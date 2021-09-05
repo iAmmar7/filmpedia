@@ -1,4 +1,6 @@
 import 'dotenv/config';
 
 import '#root/db/connection';
-import '#root/server/startServer';
+import startServer from '#root/server/startServer';
+
+startServer();
