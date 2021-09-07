@@ -1,7 +1,7 @@
-import * as Query from './queries';
+import { cheffs } from './queries';
 
 const resolvers = {
-  Query,
+  ...cheffs,
 };
 
 export default resolvers;

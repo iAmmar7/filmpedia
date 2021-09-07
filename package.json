@@ -2,5 +2,8 @@
   "name": "cheff-rest",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "watch": "cd server && yarn watch"
+  }
 }
