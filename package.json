@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "watch": "cd server && yarn watch"
+    "watch-server": "cd server && yarn watch",
+    "watch-client": "cd app && yarn watch"
   }
 }
