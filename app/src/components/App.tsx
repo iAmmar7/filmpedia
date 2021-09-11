@@ -9,7 +9,6 @@ import graphQLClient from '../api/graphql';
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 80rem;
-  border: 1px solid red;
 `;
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
     <ApolloProvider client={graphQLClient}>
       <Header />
       <Wrapper>
-        <h1>App</h1>
         <Cheffs />
       </Wrapper>
     </ApolloProvider>

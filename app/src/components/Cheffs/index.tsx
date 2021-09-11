@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useQuery } from '@apollo/client';
 
+import Loader from '../Loader';
+import { Heading } from './styles';
 import { cheffs } from '../../api/queries';
 
 interface Cheff {
@@ -19,13 +21,25 @@ interface Restaurant {
 }
 
 function Cheffs() {
-  const { loading, error, data } = useQuery(cheffs);
+  const { loading, error, data } = useQuery<QueryData>(cheffs);
 
-  console.log('Cheffs', loading, error, data);
+  if (loading) return <Loader />;
 
   return (
     <div>
-      <h1>Cheffs list</h1>
+      <Heading>Cheffs</Heading>
+      {data?.cheffs?.map((chef) => (
+        <div>
+          <p>Name: {chef.name} </p>
+          <p>
+            Restaurants: [
+            {chef.restaurants.map((rest, index) =>
+              index + 1 === chef.restaurants.length ? rest.name : rest.name + ', '
+            )}
+            ]
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

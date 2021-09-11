@@ -5,6 +5,7 @@ const Container = styled.div`
   width: 100%;
   background-color: #0d050e;
   display: flex;
+  justify-content: center;
 `;
 
 function Header() {
