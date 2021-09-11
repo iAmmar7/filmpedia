@@ -2,10 +2,10 @@ import { gql } from '@apollo/client';
 
 const query = gql`
   {
-    cheffs {
+    actors {
       id
       name
-      restaurants {
+      movies {
         id
         name
       }

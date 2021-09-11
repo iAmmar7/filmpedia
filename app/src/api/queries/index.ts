@@ -1,1 +1,1 @@
-export { default as cheffs } from './cheffs';
+export { default as actors } from './actors';

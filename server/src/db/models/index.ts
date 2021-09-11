@@ -1,4 +1,4 @@
-import Cheff from './Cheff';
-import Restaurant from './Restaurant';
+import Actor from './Actor';
+import Movie from './Movie';
 
-export default [Cheff, Restaurant];
+export default [Actor, Movie];

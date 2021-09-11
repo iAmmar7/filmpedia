@@ -1,15 +1,15 @@
 import { Table, Model, Column, DataType, ForeignKey, BelongsTo } from 'sequelize-typescript';
 
-import Cheff from './Cheff';
+import Actor from './Actor';
 
 @Table({
   defaultScope: {
     attributes: { exclude: ['deletedAt'] },
   },
   paranoid: true,
-  tableName: 'restaurants',
+  tableName: 'movies',
 })
-export class Restaurant extends Model {
+export class Movie extends Model {
   @Column({
     allowNull: false,
     autoIncrement: true,
@@ -22,8 +22,8 @@ export class Restaurant extends Model {
     allowNull: false,
     type: DataType.INTEGER.UNSIGNED,
   })
-  @ForeignKey(() => Cheff)
-  cheffId!: string;
+  @ForeignKey(() => Actor)
+  actorId!: string;
 
   @Column({
     allowNull: false,
@@ -31,8 +31,8 @@ export class Restaurant extends Model {
   })
   name!: string;
 
-  @BelongsTo(() => Cheff)
-  cheff!: Cheff;
+  @BelongsTo(() => Actor)
+  actor!: Actor;
 }
 
-export default Restaurant;
+export default Movie;

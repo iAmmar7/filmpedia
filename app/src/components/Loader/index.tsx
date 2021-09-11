@@ -17,7 +17,7 @@ function LoaderComponent() {
         color="#00BFFF"
         height={500}
         width={500}
-        timeout={1000} //3 secs
+        timeout={1000} //1 secs
       />
     </Wrapper>
   );

@@ -1,15 +1,15 @@
 import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript';
 
-import Restaurant from './Restaurant';
+import Movie from './Movie';
 
 @Table({
   defaultScope: {
     attributes: { exclude: ['deletedAt'] },
   },
   paranoid: true,
-  tableName: 'cheffs',
+  tableName: 'actors',
 })
-class Cheff extends Model {
+class Actor extends Model {
   @Column({
     allowNull: false,
     autoIncrement: true,
@@ -24,8 +24,8 @@ class Cheff extends Model {
   })
   name!: string;
 
-  @HasMany(() => Restaurant)
-  restaurants!: Restaurant[];
+  @HasMany(() => Movie)
+  movies!: Movie[];
 }
 
-export default Cheff;
+export default Actor;

@@ -1,5 +1,5 @@
-import cheffQueries from './cheffs';
+import actorQueries from './actors';
 
 export default {
-  ...cheffQueries,
+  ...actorQueries,
 };

@@ -1,5 +1,5 @@
-import Cheff from './Cheff';
-import Restaurant from './Restaurant';
+import Actor from './Actor';
+import Movie from './Movie';
 
 const Root = /* GraphQL */ `
   # The dummy queries and mutations are necessary because
@@ -23,4 +23,4 @@ const Root = /* GraphQL */ `
   }
 `;
 
-export default [Root, Cheff, Restaurant];
+export default [Root, Actor, Movie];

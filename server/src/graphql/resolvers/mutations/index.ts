@@ -1,7 +1,7 @@
-import cheffMutations from './cheffs';
-import restaurantMutations from './restaurants';
+import actorMutations from './actors';
+import movieMutations from './movies';
 
 export default {
-  ...cheffMutations,
-  ...restaurantMutations,
+  ...actorMutations,
+  ...movieMutations,
 };

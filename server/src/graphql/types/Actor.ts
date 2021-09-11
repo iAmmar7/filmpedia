@@ -1,15 +1,15 @@
 export default /* GraphQL */ `
-  type Cheff {
+  type Actor {
     id: ID!
     name: String!
-    restaurants: [Restaurant!]!
+    movies: [Movie!]!
   }
 
   extend type Query {
-    cheffs: [Cheff!]
+    actors: [Actor!]
   }
 
   extend type Mutation {
-    createCheff(name: String!): Cheff!
+    createActor(name: String!): Actor!
   }
 `;

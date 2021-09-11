@@ -3,7 +3,7 @@ import { ApolloProvider } from '@apollo/client';
 import styled from 'styled-components';
 
 import Header from './Header';
-import Cheffs from './Cheffs';
+import Actors from './Actors';
 import graphQLClient from '../api/graphql';
 
 const Wrapper = styled.div`
@@ -16,7 +16,7 @@ function App() {
     <ApolloProvider client={graphQLClient}>
       <Header />
       <Wrapper>
-        <Cheffs />
+        <Actors />
       </Wrapper>
     </ApolloProvider>
   );

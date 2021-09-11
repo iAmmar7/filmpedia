@@ -11,7 +11,7 @@ const Container = styled.div`
 function Header() {
   return (
     <Container>
-      <h2>Cheffs and Restaurant</h2>
+      <h2>Actors and Movies</h2>
     </Container>
   );
 }
