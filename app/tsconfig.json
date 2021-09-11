@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "jsx": "react",
     "module": "commonjs",
-    "strict": true,
-    "target": "es6"
-  }
+    "strict": true
+  },
+  "exclude": ["node_modules", "types", "dist"]
 }
