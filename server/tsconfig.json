@@ -13,5 +13,6 @@
     "target": "es6",
     "types": ["node"],
     "esModuleInterop": true
-  }
+  },
+  "exclude": ["node_modules", "types", "sequelize"]
 }
