@@ -1,7 +1,7 @@
 module.exports.up = (queryInterface, DataTypes) => {
   // Create a table
   return queryInterface.createTable(
-    'restaurants',
+    'movies',
     {
       id: {
         allowNull: false,
@@ -9,11 +9,11 @@ module.exports.up = (queryInterface, DataTypes) => {
         primaryKey: true,
         type: DataTypes.INTEGER.UNSIGNED,
       },
-      cheffId: {
+      actorId: {
         allowNull: false,
         references: {
           key: 'id',
-          model: 'cheffs',
+          model: 'actors',
         },
         type: DataTypes.INTEGER.UNSIGNED,
       },
@@ -42,5 +42,5 @@ module.exports.up = (queryInterface, DataTypes) => {
 
 module.exports.down = (queryInterface) => {
   // Drop a table
-  return queryInterface.dropTable('restaurants');
+  return queryInterface.dropTable('movies');
 };

@@ -1,7 +1,7 @@
 module.exports.up = (queryInterface, DataTypes) => {
   // Create a table
   return queryInterface.createTable(
-    'cheffs',
+    'actors',
     {
       id: {
         allowNull: false,
@@ -34,5 +34,5 @@ module.exports.up = (queryInterface, DataTypes) => {
 
 module.exports.down = (queryInterface) => {
   // Drop a table
-  return queryInterface.dropTable('cheffs');
+  return queryInterface.dropTable('actors');
 };
