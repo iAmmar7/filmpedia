@@ -9,7 +9,7 @@ import Cheff from './Cheff';
   paranoid: true,
   tableName: 'restaurants',
 })
-export class Restaurant extends Model<Restaurant> {
+export class Restaurant extends Model {
   @Column({
     allowNull: false,
     autoIncrement: true,

@@ -1,1 +1,5 @@
-export { default as cheffs } from './cheffs';
+import cheffQueries from './cheffs';
+
+export default {
+  ...cheffQueries,
+};

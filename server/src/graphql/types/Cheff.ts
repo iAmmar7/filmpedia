@@ -8,4 +8,8 @@ export default /* GraphQL */ `
   extend type Query {
     cheffs: [Cheff!]
   }
+
+  extend type Mutation {
+    createCheff(name: String!): Cheff!
+  }
 `;

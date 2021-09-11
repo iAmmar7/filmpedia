@@ -1,7 +1,9 @@
-import { cheffs } from './queries';
+import queries from './queries';
+import mutations from './mutations';
 
 const resolvers = {
-  ...cheffs,
+  ...queries,
+  ...mutations,
 };
 
 export default resolvers;
