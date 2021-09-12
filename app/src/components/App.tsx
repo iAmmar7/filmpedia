@@ -9,6 +9,7 @@ import graphQLClient from '../api/graphql';
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 80rem;
+  font-size: 18px;
 `;
 
 function App() {

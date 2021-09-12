@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 
 import Loader from '../Loader';
-import { Heading } from './styles';
+import AddMovie from '../AddMovie';
+import { Heading, ActorContainer } from './styles';
 import { actors } from '../../api/queries';
+import { addMovie } from '../../api/mutations';
 
 interface Actor {
   id: string;
@@ -22,20 +24,37 @@ interface Movie {
 
 function Actors() {
   const { loading, error, data } = useQuery<QueryData>(actors);
+  const [createMovie, { data: mutData, loading: mutLoading, error: mutError }] = useMutation<
+    {
+      createMovie: Movie;
+    },
+    {
+      actorId: string;
+      name: string;
+    }
+  >(addMovie, {
+    refetchQueries: [actors, 'GetAllActors'],
+  });
 
-  if (loading) return <Loader />;
+  const addMovieHandler = async (actorId: string, name: string) => {
+    await createMovie({
+      variables: { actorId, name },
+    });
+  };
 
   return (
     <div>
+      {(loading || mutLoading) && <Loader />}
       <Heading>Actors</Heading>
       {data?.actors?.map((actor) => (
-        <div>
+        <ActorContainer key={actor.id}>
           <p>Name: {actor.name} </p>
           <p>
             Movies: [
             {actor.movies.map((rest, index) => (index + 1 === actor.movies.length ? rest.name : rest.name + ', '))}]
           </p>
-        </div>
+          <AddMovie handleSubmit={addMovieHandler} actorId={actor.id} />
+        </ActorContainer>
       ))}
     </div>
   );
