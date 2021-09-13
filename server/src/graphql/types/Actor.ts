@@ -6,7 +6,7 @@ export default /* GraphQL */ `
   }
 
   extend type Query {
-    actors: [Actor!]
+    getAllActors: [Actor!]
   }
 
   extend type Mutation {

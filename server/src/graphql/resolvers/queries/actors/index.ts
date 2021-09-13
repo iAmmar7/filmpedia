@@ -3,7 +3,7 @@ import movies from './movies';
 
 export default {
   Query: {
-    actors: getAllActors,
+    getAllActors,
   },
 
   Actor: {

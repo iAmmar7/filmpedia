@@ -1,9 +1,7 @@
 import queries from './queries';
 import mutations from './mutations';
 
-const resolvers = {
+export default {
   ...queries,
   ...mutations,
 };
-
-export default resolvers;

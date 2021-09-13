@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 const query = gql`
   query GetAllActors {
-    actors {
+    getAllActors {
       id
       name
       movies {

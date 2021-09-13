@@ -5,6 +5,10 @@ export default /* GraphQL */ `
     actorId: ID!
   }
 
+  extend type Query {
+    getAllMovies: [Movie!]
+  }
+
   extend type Mutation {
     createMovie(actorId: ID!, name: String!): Movie!
   }
