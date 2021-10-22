@@ -2,6 +2,7 @@
 
 This is a simple CRUD application that works around actors and their movies.
 
+## *Purpose*
 The purpose of this application is to make use of the following technologies in a single project:
 
 - ![react](https://via.placeholder.com/12/61DAFB/000000?text=+) `React`
